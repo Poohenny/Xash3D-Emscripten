@@ -102,6 +102,25 @@
 			transition: 500ms linear 0s;
 			outline: 0 none;
 		}
+		.launch-btn {
+    background-color: #ffa600; /* Main orange color */
+    color: #000000;            /* Black text for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 300ms;
+}
+
+.launch-btn:hover {
+    background-color: #f0b418; /* Lighter yellow-orange on hover */
+    box-shadow: 0px 0px 15px #ffa600; /* Subtle glow effect */
+    transform: scale(1.05); /* Slightly grows when you hover */
+}
 		a.glow:hover, a.glow:focus
 		{
 			color: #ffa600;
@@ -149,7 +168,7 @@
 			<hr>
 			Command-line arguments: <input name=d type=text id=iArgs value="+fps_max 60 +map prize" /><br><br>
 
-			<input type=button onclick="startXash();return false;" value="Launch map" />
+			<input type=button class="launch-btn" onclick="startXash();return false;" value="Launch map" />
 
 		</form>
 
