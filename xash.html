@@ -502,12 +502,11 @@
 
 			ENV.XASH3D_GAMEDIR = gamedir;
 			ENV.XASH3D_RODIR = '/rodir'
-			startXash();return false;
 
 			function loadModule(name)
 			{
 				var script = document.createElement('script');
-				script.onload = function(){moduleCount++;if(moduleCount==3){Module.setStatus("Scripts downloaded!");}};
+				script.onload = function(){moduleCount++;if(moduleCount==3){Module.setStatus("Scripts downloaded!");startXash();}};
 				document.body.appendChild(script);
 				script.src = name + ".js";
 			}
